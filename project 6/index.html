@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        gap: 40px;
+        background-color: aqua;
+    }
+    #digit{
+        text-align: center;
+    }
+    .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    #count{
+        font-size: 40px;
+        margin: 20px;
+        font-weight: 800;
+    }
+</style>
+<body>
+    <!-- <form action="">
+        <input id="btn" type="text">
+    </form> -->
+    <h3 id="digit">digit counter</h3>
+
+    <button id="btn1" class="btn">Increase</button>
+    <button id="btn2" class="btn">Decrease</button>
+    <button id="btn3" class="btn" >Reset</button>
+    <div id="count"> 0</div>
+</body>
+<script>
+    // let btn = document.getElementById('btn')
+    // btn.addEventListener('focus',()=>{
+    //     btn.style.backgroundColor = "pink"
+    // })
+    // btn.addEventListener('blur',()=>{
+    //     btn.style.backgroundColor = "blue"
+    // })
+    // btn.addEventListener('change',function(){
+    //     console.log(this.value);
+    // })
+    let count = 0
+   let newcount = document.getElementById('count')
+   let increase =  document.getElementById('btn1')
+   let decrease =  document.getElementById('btn2')
+   let reset = document.getElementById('btn3')
+   increase.addEventListener('click',()=>{
+        count++
+        newcount.textContent = count
+   })
+   decrease.addEventListener('click',()=>{
+        count--
+        newcount.textContent = count
+   })
+   reset.addEventListener('click',()=>{
+    count = 0
+    newcount.textContent = count
+   })
+    
+</script>
+</html>
